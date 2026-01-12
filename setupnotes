@@ -1,0 +1,17 @@
+*****************   Running my tests:
+mvn clean test -DsuiteXmlFiles="src/test/java/com/grafana/suites/APISmokeTests.xml"
+mvn clean test -DsuiteXmlFiles="src/test/java/com/grafana/suites/UISmokeTests.xml"
+
+
+*****************   Install & Run Grafana Locally
+Running via my Docker setup in windows:
+in powershell-
+docker run -d -p 3000:3000 --name grafana grafana/grafana-oss
+
+in browser-
+http://localhost:3000
+
+Default Login
+username: admin
+password: admin
+my new password: admin@123

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.grafana.reporting.APITestListener"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="Grafana API Smoke tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.grafana.tests.api.DashboardTests"/>
+        </classes>
+    </test>
+</suite>

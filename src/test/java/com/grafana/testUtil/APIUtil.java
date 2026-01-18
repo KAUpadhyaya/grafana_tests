@@ -16,8 +16,8 @@ public class APIUtil extends APITestBase{
                 .when().get(APIResources.foldersPath())
                 .then().log().all().spec(verifyResponseSpec("JSON", 200))
                         .extract().response();
-        String folderUid = response.jsonPath()
-                        .getString("find { it.title == '"+folderName+"' }.uid");
+
+        String folderUid = response.jsonPath().getString("find { it.title == '"+folderName+"' }.uid");
 
         RestAssured
                 .given().spec(defineRequestSpec())
